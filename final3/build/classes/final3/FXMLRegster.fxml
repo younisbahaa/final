@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="361.0" prefWidth="783.0" style="-fx-background-color: #00cec9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="final3.FXMLRegsterController">
+   <children>
+      <TableView fx:id="semeTable" layoutX="291.0" layoutY="32.0" onMouseClicked="#loadData" prefHeight="335.0" prefWidth="492.0">
+        <columns>
+          <TableColumn fx:id="patient" prefWidth="153.0" text="patientID" />
+          <TableColumn fx:id="apointmet" prefWidth="161.0" text="apointmetID" />
+            <TableColumn fx:id="status" prefWidth="161.0" text="status" />
+        </columns>
+      </TableView>
+      <Button layoutX="22.0" layoutY="294.0" mnemonicParsing="false" onAction="#addseme" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: #1d99a1;" text="Add" />
+      <Button layoutX="150.0" layoutY="294.0" mnemonicParsing="false" onAction="#deleteseme" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: #ba6e73;" text="delete" />
+      <Text layoutX="22.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add patient appointment" wrappingWidth="219.16015625">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Pane layoutX="4.0" layoutY="38.0" prefHeight="257.0" prefWidth="292.0">
+         <children>
+            <TextField fx:id="patientid" layoutX="116.0" layoutY="46.0" />
+            <TextField fx:id="appoitmentid" layoutX="116.0" layoutY="104.0" prefHeight="25.0" prefWidth="149.0" />
+            <TextField fx:id="statusid" layoutX="116.0" layoutY="164.0" />
+            <Label layoutX="6.0" layoutY="48.0" prefHeight="21.0" prefWidth="90.0" text="patient id :">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="107.0" prefHeight="20.0" prefWidth="109.0" text="Appoitment id :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="164.0" text="status: ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="backButton" layoutX="666.0" layoutY="-1.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: red;" text="back" textFill="WHITE" />
+   </children>
+</AnchorPane>
